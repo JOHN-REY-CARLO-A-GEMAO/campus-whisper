@@ -1,0 +1,62 @@
+{
+  "name": "Confession",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the post"
+    },
+    "content": {
+      "type": "string",
+      "description": "Main content of the post"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "daily_life",
+        "funny",
+        "rant",
+        "relationships",
+        "deep_thoughts",
+        "school_life",
+        "advice_needed",
+        "secret"
+      ],
+      "description": "Category of the post"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL of an optional image attached to the post"
+    },
+    "author_id": {
+      "type": "string",
+      "description": "ID of the user who created the post"
+    },
+    "hug_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of 'hug' reactions"
+    },
+    "relate_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of 'relate' reactions"
+    },
+    "is_reported": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this post has been reported"
+    },
+    "report_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of times this post has been reported"
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "category",
+    "author_id"
+  ]
+}
