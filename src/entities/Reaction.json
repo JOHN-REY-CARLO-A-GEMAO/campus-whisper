@@ -1,0 +1,27 @@
+{
+  "name": "Reaction",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "ID of the user who reacted"
+    },
+    "post_id": {
+      "type": "string",
+      "description": "ID of the post being reacted to"
+    },
+    "reaction_type": {
+      "type": "string",
+      "enum": [
+        "hug",
+        "relate"
+      ],
+      "description": "Type of reaction"
+    }
+  },
+  "required": [
+    "user_id",
+    "post_id",
+    "reaction_type"
+  ]
+}
