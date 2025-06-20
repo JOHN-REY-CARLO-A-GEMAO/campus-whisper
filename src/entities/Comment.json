@@ -1,0 +1,38 @@
+{
+  "name": "Comment",
+  "type": "object",
+  "properties": {
+    "confession_id": {
+      "type": "string",
+      "description": "ID of the confession this comment belongs to"
+    },
+    "content": {
+      "type": "string",
+      "description": "Content of the comment"
+    },
+    "author_id": {
+      "type": "string",
+      "description": "ID of the user who created the comment"
+    },
+    "is_supportive": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether this comment is marked as supportive"
+    },
+    "hug_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of virtual hugs for this comment"
+    },
+    "is_reported": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this comment has been reported"
+    }
+  },
+  "required": [
+    "confession_id",
+    "content",
+    "author_id"
+  ]
+}
